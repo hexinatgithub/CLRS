@@ -1,0 +1,9 @@
+kn*n matrix multiply n*kn matrix
+
+将kn*n matrix切分成k个n*n个matrix A1...AK
+将n*kn matrix切分成k个n*n个matrix B1...BK
+
+使用Strassen's algorithm算n*n multiply n*n，在将他们相加
+A1*B1+A2*B2+...+AK*BK 即可以得到想要的matrix
+
+反n*kn multiply kn*n也是类似

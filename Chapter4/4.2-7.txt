@@ -1,0 +1,3 @@
+A = (a+b)(c+d) = ac+ad+bc+bd
+B = ac, C = bd
+(B-C)+(A-B-C)i
