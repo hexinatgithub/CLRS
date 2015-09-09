@@ -1,0 +1,10 @@
+A = min-heap(L1_handle...LK_handle)	//根据list第一个元素的值来进行min_heap排序
+
+merge_list(A, i)
+	if i > A.heap_size
+		return empty_list
+	left_list = merge_list(A, LEFT(i))
+	right_list = merge_list(A, RIGHT(i))
+	merge_list = merge(left_list, right_list)	//使用和merge sort合并两个列表一样的函数
+	A[i] list append merge_list to form a new list
+	return new_list

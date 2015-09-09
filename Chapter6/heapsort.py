@@ -42,8 +42,8 @@ def heapsort(A):
 		max_heapify(A, 0)
 		i -= 1
 
-a = [27,17,3,16,13,10,1]
-A = heap()
-A.extend(a)
-heapsort(A)
-print A
+# a = [27,17,3,16,13,10,1]
+# A = heap()
+# A.extend(a)
+# heapsort(A)
+# print A

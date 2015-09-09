@@ -28,8 +28,8 @@ def max_heapify(A, i):
 		else:
 			break
 
-a = [27,17,3,16,13,10,1]
-A = heap(len(a))
-A.extend(a)
-max_heapify(A, 2)
-print A
+# a = [27,17,3,16,13,10,1]
+# A = heap(len(a))
+# A.extend(a)
+# max_heapify(A, 2)
+# print A
