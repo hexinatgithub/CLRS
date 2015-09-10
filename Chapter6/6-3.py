@@ -41,18 +41,29 @@ def isWithin(table, row, column):
 
 
 def maintain_table_property(table, row, column):
+	"""
+	maintain table's entries of each row are in sorted order from left to right
+	and the entries of each column are in sorted order from top to bottom.
+	"""
+	
+	# check row, column in table bound
 	if not isWithin(table, row, column):
 		return
+
 	smallest = table[row][column]
 	new_row, new_column = row, column
 	right_row, right_column = right(row, column)
 	down_row, down_column = down(row, column)
+
+	# find the smallest from itself, right elements, down elements
 	if isWithin(table, right_row, right_column) and table[right_row][right_column] < smallest:
 		smallest = table[right_row][right_column]
 		new_row, new_column = right_row, right_column
 	if isWithin(table, down_row, down_column) and table[down_row][down_column] < smallest:
 		new_row, new_column = down_row, down_column
 
+	# if the smallest elements is not itself, then change with then smallest elements.
+	# otherwise, terminate the recuisive.
 	if (new_row, new_column) != (row, column):
 		table[row][column], table[new_row][new_column] = table[new_row][new_column], table[row][column]
 		maintain_table_property(table, new_row, new_column)
@@ -69,8 +80,7 @@ def insert(table, row, column):
 	# exceed the matrix bound
 	if not isWithin(table, row, column):
 		return
-	# print 'insert'
-	# print table
+
 	largest = table[row][column]
 	new_row, new_column = row, column
 	up_row, up_column = up(row, column)
